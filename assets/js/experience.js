@@ -6,16 +6,16 @@ const experiencecards = document.querySelector(".experience-cards");
 const exp = [{
         title: "full Stack developer",
         cardImage: "assets/images/experience-page/mreshet.png",
-        place: "Mreshet",
+        place: "Mreshet (Digital Marketing firm)",
         time: "(Aug, 2021 - present)",
-        desp: " <li>Specially Node.js/javascript/React/kotlin(android)/electron(desktop app)/google firebase/Api's integration/Containers/nginx/Git/linux/AWS buckets/JetBackUp/Postgres/Sql.\nLooking for an experienced developer to take your Web/Mobile project off the ground? I might be the right person for you.</li>",
+        desp: "<li>Experience with E2E developing a platform for websites using Node.js, React and JavaScript. </li> <li>  Develop applications for android in Kotlin on varied DB including Redis, PostgreSQL, SQL, & Firebase.</li> <li>Develop desktop applications using Electron. </li><li> Develop dynamic components for security using JavaScript.</li><li> Ongoing using API integration to customer’s local websites. </li><li> Manage the code using Git and Bitbucket and manage assignments using Jira and Monday. </li><li> Experience in the full development lifecycle, from design to QA, work collaboratively with Product Managers and QA team.</li>",
     },
     {
         title: "full Stack developer",
         cardImage: "assets/images/experience-page/flipkart.jpg",
         place: "FreeLancer",
         time: "(jan, 2020 - Oct, 2021)",
-        desp: " <li>SpeciallyReact/React Native/php/node.js/flutter/google firebase.\nLooking for an experienced developer to take your Web/Mobile project off the ground? I might be the right person for you.</li>",
+        desp: " <li>E2E Full Stack development for small businesses using diverse programming languages and environments. </li> <li> Fix bugs in a familiar and unfamiliar code environment.</li>",
     },
     {
         title: "Student Developer",

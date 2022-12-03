@@ -3,7 +3,8 @@ $name = $_POST['field1'];
 $email = $_POST['field2'];
 $subject = "From portfolio Site";
 $message = $_POST['field3'];
-echo "$name";
+$ownerEmail = "ameer0233@gmail.com";
+// echo "$name";
 
 $email_message = "
 
@@ -14,8 +15,8 @@ Message: " . $message . "
 
 ";
 
-//mail($email, "New Message", $email_message);
-header('location:../../index.html')
+mail($ownerEmail, "New Message", $email_message);
+// header('location:../../index.html')
 
 ?>
 <!DOCTYPE html>
