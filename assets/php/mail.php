@@ -15,8 +15,8 @@ Message: " . $message . "
 
 ";
 
-mail($ownerEmail, "New Message", $email_message);
-// header('location:../../index.html')
+// mail($ownerEmail, "New Message", $email_message);
+header('location:../../index.html')
 
 ?>
 <!DOCTYPE html>

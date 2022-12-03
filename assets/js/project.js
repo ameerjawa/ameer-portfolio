@@ -6,6 +6,14 @@ const projectcards = document.querySelector(".projectcards");
 // Array of object for projects
 const projects = [
   {
+    title: "Sprent Managment",
+    cardImage: "assets/images/project-page/sprents_managment1.jpg",
+    description: "sprents managment workplace",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/sprents_managment",
+  },
+  {
     title: "Quiz App",
     cardImage: "assets/images/project-page/quiz.jpg",
     description: "A quiz app built using basic react.",
