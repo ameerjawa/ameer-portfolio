@@ -1,5 +1,24 @@
 "use strict";
 
+
+const handleSubmit = event => {
+  event.preventDefault();
+
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch(error => alert(error));
+};
+
+document.getElementById("contact")?.addEventListener("submit", handleSubmit);
+
+
 // Header
 
 let header = $(`
@@ -132,7 +151,7 @@ let footer = $(`
                 <h6 class="display">Get in Touch</h6>
               </div>
               <!-- Updated form for Netlify -->
-              <form method="GET" data-netlify="true" name="contact">
+              <form id="contact" method="GET" data-netlify="true" name="contact">
                 <!-- Add a hidden input for Netlify forms -->
                 <input type="hidden" name="form-name" value="contact" />
                 
