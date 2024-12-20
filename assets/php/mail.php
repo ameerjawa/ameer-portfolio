@@ -146,12 +146,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="form-container">
         <h1>Contact Me</h1>
-        <form action="" method="POST">
+        <!-- <form action="" method="POST">
             <input type="text" name="field1" placeholder="Your Name" required>
             <input type="email" name="field2" placeholder="Your Email" required>
             <textarea name="field3" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
-        </form>
+        </form> -->
     </div>
 </body>
 
