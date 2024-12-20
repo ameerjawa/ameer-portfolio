@@ -132,7 +132,7 @@ let footer = $(`
                 <h6 class="display">Get in Touch</h6>
               </div>
               <!-- Updated form for Netlify -->
-              <form action="/" method="POST" data-netlify="true" name="contact">
+              <form method="POST" data-netlify="true" name="contact">
                 <!-- Add a hidden input for Netlify forms -->
                 <input type="hidden" name="form-name" value="contact" />
                 
