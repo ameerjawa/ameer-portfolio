@@ -4,67 +4,162 @@ AOS.init();
 
 const moocs = document.querySelector(".moocs");
 const moocscards = [
+   // Existing courses
+
+  // New courses
   {
-    title: "Data Science",
+    title: "Cybersecurity Fundamentals",
     cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/browse/data-science",
+    moocLink: "https://www.coursera.org/specializations/cyber-security",
   },
   {
-    title: "Cryptography",
+    title: "Advanced Penetration Testing",
     cardImage: "assets/images/education-page/udemy.svg",
-    moocLink: "https://www.udemy.com/course/cryptography-for-beginners/",
+    moocLink: "https://www.udemy.com/course/advanced-penetration-testing/ ",
   },
   {
-    title: "Machine Learning",
+    title: "Ethical Hacking Essentials",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/learn-ethical-hacking-from-scratch/",
+  },
+  {
+    title: "Web Application Security Testing",
     cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/learn/machine-learning",
+    moocLink: "https://www.coursera.org/learn/web-application-security",
   },
   {
-    title: "Introduction to HTML 5",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink: "https://www.udacity.com/course/intro-to-html-and-css--ud001",
-  },
-  {
-    title: "Introduction to CSS 3",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink: "https://www.udacity.com/course/intro-to-html-and-css--ud001",
-  },
-  {
-    title: "Javascript",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink: "https://www.udacity.com/course/intro-to-javascript--ud803",
-  },
-  {
-    title: "Bootstrap 4",
+    title: "Linux System Administration",
     cardImage: "assets/images/education-page/udemy.svg",
-    moocLink: "https://www.udemy.com/course/bootstrap-4-tutorials/",
+    moocLink: "https://www.udemy.com/course/linux-administration-bootcamp/",
   },
   {
-    title: "Intro to React",
+    title: "Python for Cybersecurity",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/python-for-cybersecurity",
+  },
+  {
+    title: "Kali Linux for Ethical Hacking",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/kali-linux-ethical-hacking/",
+  },
+  {
+    title: "Full-Stack Web Development",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/the-web-developer-bootcamp/",
+  },
+  {
+    title: "React and Redux",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/react-redux/",
+  },
+  {
+    title: "Node.js and Express",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/full-stack-react-node",
+  },
+  {
+    title: "Modern JavaScript",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/the-complete-javascript-course/",
+  },
+  {
+    title: "Cloud Computing Basics",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/cloud-computing-basics",
+  },
+  {
+    title: "AWS for Beginners",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/aws-certified-cloud-practitioner/",
+  },
+  {
+    title: "Docker and Kubernetes",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/",
+  },
+  {
+    title: "Artificial Intelligence Foundations",
     cardImage: "assets/images/education-page/edx.svg",
-    moocLink: "https://www.edx.org/learn/reactjs",
+    moocLink: "https://www.edx.org/professional-certificate/columbiax-artificial-intelligence",
   },
   {
-    title: "Intro to React Native",
+    title: "Deep Learning Specialization",
     cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/lecture/react-native/introduction-to-react-native-Eax0D",
+    moocLink: "https://www.coursera.org/specializations/deep-learning",
   },
   {
-    title: "NodeJS, Express and MongoDB",
-    cardImage: "assets/images/education-page/coursera2.svg",
-    moocLink: "https://www.coursera.org/learn/server-side-nodejs",
-  },
-  {
-    title: "XML-AJAX",
+    title: "Blockchain Basics",
     cardImage: "assets/images/education-page/udemy.svg",
-    moocLink: "https://www.udemy.com/course/xml-from-beginner-to-expert/",
+    moocLink: "https://www.udemy.com/course/blockchain-and-cryptocurrency-explained/",
   },
   {
-    title: "Data Structures & Algorithms",
-    cardImage: "assets/images/education-page/udacity.svg",
-    moocLink: "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
+    title: "Google Cloud Fundamentals",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/gcp-fundamentals",
   },
+  {
+    title: "Microsoft Azure Basics",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/azure-administration/",
+  },
+  {
+    title: "Internet of Things (IoT) Specialization",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/specializations/iot",
+  },
+  {
+    title: "Penetration Testing with Metasploit",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/penetration-testing-with-metasploit/",
+  },
+  {
+    title: "Azure Security Engineer Certification",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/microsoft-azure-security",
+  },
+  {
+    title: "SQL for Data Science",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/sql-data-science",
+  },
+  {
+    title: "CI/CD Pipeline with Jenkins",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/jenkins-ci-cd-pipeline/",
+  },
+  {
+    title: "Certified Ethical Hacker (CEH)",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/ethical-hacking/",
+  },
+  {
+    title: "Cyber Threat Intelligence",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/cyber-threat-intelligence",
+  },
+  {
+    title: "Programming with GoLang",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/learn-go-the-complete-bootcamp-course-golang/",
+  },
+  {
+    title: "Rust for Beginners",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/rust-programming-language-tutorial/",
+  },
+  {
+    title: "React Native Advanced Concepts",
+    cardImage: "assets/images/education-page/coursera2.svg",
+    moocLink: "https://www.coursera.org/learn/react-native-advanced",
+  },
+  {
+    title: "Secure Coding Practices",
+    cardImage: "assets/images/education-page/udemy.svg",
+    moocLink: "https://www.udemy.com/course/secure-coding-practices/",
+  },
+  
 ];
+
 
 const experience = [
   {

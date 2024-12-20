@@ -3,20 +3,149 @@ AOS.init();
 
 const projectcards = document.querySelector(".projectcards");
 //
-// Array of object for projects
 const projects = [
+  {
+    title: "React Landing Page",
+    cardImage: "assets/images/project-page/react-landing-page.png",
+    description: "A landing page designed using React.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/react-landing-page",
+  },
+  {
+    title: "Taskify",
+    cardImage: "assets/images/project-page/taskify.jpg",
+    description: "A task management app for organizing daily tasks.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/taskify",
+  },
+  {
+    title: "Life-Tracker",
+    cardImage: "assets/images/project-page/life-tracker.png",
+    description: "An app to track life goals and progress.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/life-tracker",
+  },
+  {
+    title: "Movies API",
+    cardImage: "assets/images/project-page/movies-api.jpg",
+    description: "API for fetching and displaying movie data.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/movies-api",
+  },
+  {
+    title: "AutoMailSender",
+    cardImage: "assets/images/project-page/automailsender.png",
+    description: "An automated email-sending tool.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/AutoMailSender",
+  },
+  {
+    title: "React Training",
+    cardImage: "assets/images/project-page/react_training.jpeg",
+    description: "React project to practice and enhance skills.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/react_training",
+  },
   {
     title: "Sprent Managment",
     cardImage: "assets/images/project-page/sprents_managment1.jpg",
-    description: "sprents managment workplace",
+    description: "Sprents management workplace.",
     tagimg: "",
     Previewlink: "",
     Githublink: "https://github.com/ameerjawa/sprents_managment",
   },
   {
+    title: "TeachMe",
+    cardImage: "assets/images/project-page/TeachMe.jpg",
+    description: "Learning app made with Flutter + Firebase.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/Teach_me/tree/master",
+  },
+  {
+    title: "MySmartRestaurant",
+    cardImage: "assets/images/project-page/mysmartrestaurant.png",
+    description: "Restaurant website made with PHP.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/MySmartResturant",
+  },
+  {
+    title: "CarRental",
+    cardImage: "assets/images/project-page/CarRental.png",
+    description: "Car rental website made with PHP & JS.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/carrental",
+  },
+  {
+    title: "SpecialDesign",
+    cardImage: "assets/images/project-page/specialdesign.png",
+    description: "Marketplace built with HTML, CSS, JS.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/special-design",
+  },
+  {
+    title: "CarsSite",
+    cardImage: "assets/images/project-page/CarsSite.png",
+    description: "Grid template for viewing cars.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/CarsSite",
+  },
+  {
+    title: "BankSite",
+    cardImage: "assets/images/project-page/BankSite.png",
+    description: "Bank website made with HTML, JS, CSS, PHP, SQL.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/basic-BankSite",
+  },
+  {
+    title: "Phone-Book",
+    cardImage: "assets/images/project-page/phone-book.png",
+    description: "Phone-book built with HTML, JS, CSS.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/designed-Phone-Book",
+  },
+  {
+    title: "NetworkScanner",
+    cardImage: "assets/images/project-page/NetworkScanner.png",
+    description: "Network scanner built with Python.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/NetworkScannerForBiggieners",
+  },
+  
+  {
+    title: "TodoList",
+    cardImage: "assets/images/project-page/todolist.jpg",
+    description: "A simple to-do list application built with React.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/TodoList",
+  },
+  {
+    title: "MyPill",
+    cardImage: "assets/images/project-page/mypill.png",
+    description: "App for tracking medications and schedules.",
+    tagimg: "",
+    Previewlink: "",
+    Githublink: "https://github.com/ameerjawa/mypill",
+  },
+
+  {
     title: "Quiz App",
     cardImage: "assets/images/project-page/quiz.jpg",
-    description: "A quiz app built using basic react.",
+    description: "A quiz app built using basic React.",
     tagimg: "",
     Previewlink: "",
     Githublink: "https://github.com/ameerjawa/Quiz-app",
@@ -32,7 +161,7 @@ const projects = [
   {
     title: "Flappy Bird",
     cardImage: "assets/images/project-page/flappybird.png",
-    description: "Flappy bird game built using React.js",
+    description: "Flappy bird game built using React.js.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "",
     Githublink: "https://github.com/ameerjawa/FlappyLearning",
@@ -40,77 +169,11 @@ const projects = [
   {
     title: "Tic Tac Toe Game",
     cardImage: "assets/images/project-page/tic-tac-toe.png",
-    description:
-      "Tested a React Tic Tac Toe Game using Jest and React Testing Library.",
+    description: "Tested a React Tic Tac Toe Game using Jest and React Testing Library.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "",
     Githublink: "https://github.com/ameerjawa/tictactoe",
-  },{
-    title: "TeachMe",
-    cardImage: "assets/images/project-page/TeachMe.jpg",
-    description:
-      "learning app made with flutter + firebase",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/Teach_me/tree/master",
-  },{
-    title: "MySmartRestaurant",
-    cardImage: "assets/images/project-page/mysmartrestaurant.png",
-    description:
-      "restaurant website made with php ",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/MySmartResturant",
-  },{
-    title: "CarRental",
-    cardImage: "assets/images/project-page/CarRental.png",
-    description:
-      "car rental website made with php & js ",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/carrental",
-  },{
-    title: "SpecialDesign",
-    cardImage: "assets/images/project-page/specialdesign.png",
-    description:
-      "market place build with Html ,CSS ,JS",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/special-design",
-  },{
-    title: "CarsSite",
-    cardImage: "assets/images/project-page/CarsSite.png",
-    description:
-      "Grid template viewing cars",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/CarsSite",
-  },{
-    title: "BankSite",
-    cardImage: "assets/images/project-page/BankSite.png",
-    description:
-      "BankWebSite made with html,js,Css,Php,Sql",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/basic-BankSite",
-  },{
-    title: "Phone-Book",
-    cardImage: "assets/images/project-page/phone-book.png",
-    description:
-      "Phone-Book made with html,js,Css",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/designed-Phone-Book",
-  },{
-    title: "NetworkScanner",
-    cardImage: "assets/images/project-page/NetworkScanner.png",
-    description:
-      "NetWork made with Python",
-    tagimg: "",
-    Previewlink: "",
-    Githublink: "https://github.com/ameerjawa/NetworkScannerForBiggieners",
   }
-  
 ];
 
 // function for rendering project cards data
@@ -129,7 +192,6 @@ const showCards = () => {
                 <h1 class="title"><a href="#">${title}</a></h1>
                 </div>
             <ul class="menu-content"><br>
-                  <li><a href="${Previewlink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></a></li>
                   <li><a href="${Githublink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>
                 </ul>
               </div>

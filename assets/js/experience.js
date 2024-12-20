@@ -3,26 +3,53 @@ AOS.init();
 //  Work experience cards
 
 const experiencecards = document.querySelector(".experience-cards");
-const exp = [{
-        title: "full Stack developer",
-        cardImage: "assets/images/experience-page/mreshet.png",
-        place: "Mreshet (Digital Marketing firm)",
-        time: "(Aug, 2021 - present)",
-        desp: "<li>Experience with E2E developing a platform for websites using Node.js, React and JavaScript. </li> <li>  Develop applications for android in Kotlin on varied DB including Redis, PostgreSQL, SQL, & Firebase.</li> <li>Develop desktop applications using Electron. </li><li> Develop dynamic components for security using JavaScript.</li><li> Ongoing using API integration to customer’s local websites. </li><li> Manage the code using Git and Bitbucket and manage assignments using Jira and Monday. </li><li> Experience in the full development lifecycle, from design to QA, work collaboratively with Product Managers and QA team.</li>",
+const exp = [
+    {
+        title: "Full Stack Engineer",
+        cardImage: "assets/images/upwork.jpeg",
+        place: "Upwork · Self-employed",
+        time: "(Jun 2023 - Present · 1 yr 7 months)",
+        desp: "<li>Developing and deploying full stack web applications with a focus on Node.js, React, and JavaScript.</li>" +
+              "<li>Creating mobile applications using Flutter and Kotlin, with database integration using Firebase, Redis, PostgreSQL, and SQL.</li>" +
+              "<li>Developing dynamic, scalable components for web and mobile applications.</li>" +
+              "<li>Managing codebase using Git and collaborating on tasks via Jira and Trello.</li>" +
+              "<li>Creating custom solutions for clients with an emphasis on performance and security.</li>" +
+              "<li>Providing full-stack consulting and technical solutions for various industries.</li>" +
+              "<li>Collaborating remotely with clients from different regions and time zones.</li>",
     },
     {
-        title: "full Stack developer",
+        title: "Full Stack Developer",
+        cardImage: "assets/images/experience-page/mreshet.png",
+        place: "Mreshet (Digital Marketing Firm)",
+        time: "(Aug 2021 - Jun 2023 · 1 yr 11 months)",
+        desp: "<li>Experience with E2E developing a platform for websites using Node.js, React, and JavaScript.</li>" +
+              "<li>Developed applications for Android in Kotlin, with a focus on varied databases including Redis, PostgreSQL, SQL, and Firebase.</li>" +
+              "<li>Built desktop applications using Electron and integrated API for customer websites.</li>" +
+              "<li>Developed dynamic components for security using JavaScript and API integration for local websites.</li>" +
+              "<li>Managed code using Git and Bitbucket, tracked tasks using Jira and Monday.com.</li>" +
+              "<li>Worked on the full development lifecycle, collaborating with Product Managers and QA teams.</li>",
+    },
+    {
+        title: "Full Stack Developer",
         cardImage: "assets/images/experience-page/flipkart.jpg",
-        place: "FreeLancer",
-        time: "(jan, 2020 - Oct, 2021)",
-        desp: " <li>E2E Full Stack development for small businesses using diverse programming languages and environments. </li> <li> Fix bugs in a familiar and unfamiliar code environment.</li>",
+        place: "Freelancer.com · Part-time",
+        time: "(Jan 2020 - Nov 2021 · 1 yr 11 months)",
+        desp: "<li>E2E Full Stack development for small businesses using diverse programming languages and environments.</li>" +
+              "<li>Fixed bugs in both familiar and unfamiliar code environments.</li>" +
+              "<li>Developed several projects including a task and time management web application using React and Node.js with SQL.</li>" +
+              "<li>Created a machine learning-based game using the Neuroevolution Algorithm with Front-End built in JS, CSS, and HTML.</li>" +
+              "<li>Developed a website for restaurants using PHP, HTML, CSS, and JavaScript, with MySQL as the database.</li>" +
+              "<li>Built an app for managing medication consumption using Flutter & Firebase.</li>" +
+              "<li>Created a car rental application using PHP.</li>",
     },
     {
         title: "Student Developer",
         cardImage: "assets/images/experience-page/gsoc.png",
         place: "Google Summer Of Code",
-        time: "(Mar - Aug, 2019)",
-        desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+        time: "(Mar 2019 - Aug 2019)",
+        desp: "<li>Worked with Mozilla as a part of Google Summer Of Code (GSoC).</li>" +
+              "<li>Developed an extension called Extension Activity Monitor for Firefox, which uses the activityLog API to monitor installed extensions.</li>" +
+              "<li>Implemented the activityLog API, enabling logs from other installed extensions to be monitored.</li>",
     },
 ];
 
@@ -59,7 +86,8 @@ document.addEventListener("DOMContentLoaded", showCards2);
 // Volunteership Cards
 
 const volunteership = document.querySelector(".volunteership");
-const volunteershipcards = [{
+const volunteershipcards = [
+    {
         title: "StudentCode-in 2020",
         cardImage: "assets/images/experience-page/2.jpg",
         description: "Responsible for handling open source contributions for the project Awesome Developer Portfolio.",
@@ -74,8 +102,27 @@ const volunteershipcards = [{
         cardImage: "assets/images/experience-page/4.jpg",
         description: "Mentoring for the open source projects Deeppixel, Awesome Developer Portfolios and Doc2Pen.",
     },
+    {
+        title: "Open Source Contributor - TensorFlow",
+        cardImage: "assets/images/experience-page/tensorflow.png",
+        description: "Contributed to the TensorFlow project by improving documentation and resolving issues.",
+    },
+    {
+        title: "Open Source Contributor - React",
+        cardImage: "assets/images/experience-page/react.jpeg",
+        description: "Helped fix bugs and improve the codebase for React by submitting pull requests related to JSX performance and state management.",
+    },
+    {
+        title: "Mentor - GitHub Campus Expert",
+        cardImage: "assets/images/experience-page/github.png",
+        description: "Mentoring students in open source contribution, GitHub usage, and community building through various programs and initiatives.",
+    },
+    {
+        title: "Open Source Contributor - Node.js",
+        cardImage: "assets/images/experience-page/nodejs.png",
+        description: "Contributed to the Node.js project by resolving performance-related issues and updating outdated dependencies.",
+    },
 ];
-
 const showCards = () => {
     let output = "";
     volunteershipcards.forEach(
@@ -95,100 +142,6 @@ const showCards = () => {
 };
 document.addEventListener("DOMContentLoaded", showCards);
 
-// Hackathon Section
-
-const hackathonsection = document.querySelector(".hackathon-section");
-const mentor = [{
-        title: "The Uplift Project",
-        subtitle: "Mentor",
-        image: "assets/images/experience-page/uplift.png",
-        desp: "I would be responsible for guiding 100s of participants across the globe in their first steps towards Applied Data Science and building end-to-end machine learning projects.",
-    },
-    {
-        title: "ULHacks",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/ulhacks.png",
-        desp: "ULHacks is a 36 hour long hackathon organized with an aim to enable students to create a project which empowers learning.",
-    },
-    {
-        title: "WaffleHacks",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/wafflehacks.png",
-        desp: "WaffleHacks 2021 is an upcoming 48-hour student-organized hackathon with an aim to bring technical solutions to local communities and small businesses.",
-    },
-    {
-        title: "Elevate Tech",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/elevate.png",
-        desp: "Elevate Hacks is an upcoming all-female virtual hackathon coming from AUGUST 14th to 15th.",
-    },
-    {
-        title: "PitchTeen",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/pitchteen.png",
-        desp: "PitchTeen 2.0 was a tech startup competition for female and non-binary communities in high school and college from all over the world with an aim to create a safe and encouraging place for women to help them explore tech and business fields.",
-    },
-    {
-        title: "Hack-A-Solution",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/hackasolution.png",
-        desp: "Hack-a-Solution 2021 is a 24 hour long hackathon organized by Frisco students to raise awareness of world issues through technology.",
-    },
-    {
-        title: "UniGlobe Hacks",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/uniglobe.png",
-        desp: "UniGlobe Hacks 2.0 is an upcoming 4-day long hackathon run by high school students held during 28-31 July 2021.",
-    },
-    {
-        title: "AtlasHacks",
-        subtitle: "Mentor",
-        image: "assets/images/experience-page/atlas.png",
-        desp: "AtlasHacks II is a 3-day virtual hackathon that aims to foster creativity within hackers all around the world.",
-    },
-    {
-        title: "NeoHacks",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/neo.png",
-        desp: "NeoHacks is an upcoming 48-hour hackathon taking place July 23-25, 2021 where hundreds of students from around the world will come together virtually to learn new skills, meet new friends, and build awesome projects. We provide beginner-friendly workshops, mentorship, fun games, and more.",
-    },
-    {
-        title: "Mission Inspired",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/mission.png",
-        desp: "InspireEd Hacks is a nationwide initiative organized by the student-for-student nonprofit, Mission InspirEd, challenging students ages 10-18 to synthesize their creativity and coding experience into a product beneficial to the educational community.",
-    },
-    {
-        title: "Hack3",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/hack3.png",
-        desp: "Hack3 2021 is an upcoming global online hackathon that aims to enable high school students to learn computer science, with a broader message of (everyone can code) targeting underrepresented demographics to improve diversity and inclusion of individuals in the computer technology space.",
-    },
-    {
-        title: "JITHack",
-        subtitle: "Mentor",
-        image: "assets/images/experience-page/jithack.png",
-        desp: "JITHack is an upcoming virtual design and development hackathon organized by the students of Jyothy Institute of Technology, Bengaluru on June 26, 2021, where participants have 24 hours to build something incredible.",
-    },
-    {
-        title: "Recess Hacks",
-        subtitle: "Mentor",
-        image: "assets/images/experience-page/recess.png",
-        desp: "Recess Hacks is an upcoming hackathon for high school students in the Greater Toronto Area that strives to encourage innovation among high school students and get involved in technology.",
-    },
-    {
-        title: "Citro Tech",
-        subtitle: "Mentor",
-        image: "assets/images/experience-page/citro.png",
-        desp: "Citro Hacks 2021 is an upcoming all-inclusive online hackathon organized by Citro Tech, a student led organization dedicated to empowering minorities in the tech field</li>",
-    },
-    {
-        title: "NHacks",
-        subtitle: "Judge",
-        image: "assets/images/experience-page/nhacks.png",
-        desp: "NHacks VI was a hackathon that aimed to encourage students everywhere to develop skills in computer science by creating tangible products that they're proud of. It initially started as Michigan's largest high school hackathon.",
-    },
-];
 
 const showCards3 = () => {
     let output = "";
