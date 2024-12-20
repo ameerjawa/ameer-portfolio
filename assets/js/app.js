@@ -1,24 +1,35 @@
 "use strict";
 
 
-const handleSubmit = event => {
-  event.preventDefault();
 
-  const myForm = event.target;
-  const formData = new FormData(myForm);
+    const form = document.getElementById("contactForm");
 
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString()
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch(error => alert(error));
-};
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-document.getElementById("contact")?.addEventListener("submit", handleSubmit);
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
 
+        try {
+            const response = await fetch("/netlify/functions/sendEmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
 
+            const result = await response.json();
+            if (response.ok) {
+                alert(result.message);
+            } else {
+                alert(result.error);
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Failed to send the email. Please try again.");
+        }
+    });
 // Header
 
 let header = $(`
@@ -151,15 +162,18 @@ let footer = $(`
                 <h6 class="display">Get in Touch</h6>
               </div>
               <!-- Updated form for Netlify -->
-              <form id="contact" method="GET" data-netlify="true" name="contact">
-                <!-- Add a hidden input for Netlify forms -->
-                <input type="hidden" name="form-name" value="contact" />
-                
-                <input type="text" name="field1" placeholder="Your Name" required />
-                <input type="email" name="field2" placeholder="Email Address" required />
-                <textarea name="field3" placeholder="Type your Message" required></textarea>
-                <input type="submit" value="Send" />
-              </form>
+                  <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
             </div>
           </div>
 
