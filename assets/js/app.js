@@ -2,34 +2,7 @@
 
 
 
-    const form = document.getElementById("contactForm");
-
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-
-        try {
-            const response = await fetch("/netlify/functions/sendEmail", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            });
-
-            const result = await response.json();
-            if (response.ok) {
-                alert(result.message);
-            } else {
-                alert(result.error);
-            }
-        } catch (error) {
-            console.error("Error:", error);
-            alert("Failed to send the email. Please try again.");
-        }
-    });
+    
 // Header
 
 let header = $(`
@@ -295,6 +268,34 @@ let upArrow = $(`
 $(document).ready(function () {
   // updating the color of the swiper bullets (initial update of color)
   updateColorOfSwiperBullets(localStorage.getItem("lightMode"));
+  const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch("/netlify/functions/sendEmail", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert(result.message);
+            } else {
+                alert(result.error);
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Failed to send the email. Please try again.");
+        }
+    });
 
   //function for the "Scroll To Top" button to detect the footer
   $(window).scroll(function () {
@@ -316,6 +317,8 @@ $(document).ready(function () {
     }
   });
 });
+
+
 
 //function to scroll to top
 const scrollToTop = () => {
